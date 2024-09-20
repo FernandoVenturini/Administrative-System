@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #060f16;
+}
+
+.test-test {
+    color: #f6f6f6;
+    margin-bottom: 20px;
+}
+
+.menu-btn {
+    color: #ff0;
+}
