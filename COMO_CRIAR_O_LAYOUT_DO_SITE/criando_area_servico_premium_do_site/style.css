@@ -1,0 +1,301 @@
+/*GOOGLE FONTS: POPPINS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/*GOOGLE FONTS: UBUNTU*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #060f16;
+}
+
+.test-test {
+    color: #f6f6f6;
+    margin-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: auto;     
+}
+
+.navbar .logo a {
+    color: #0000ff;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999; /*DEFINE A ORDEM DO ELEMENTO*/
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #121721;
+    border-bottom: 1px solid #1b202a;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+}
+
+/* START - RESPONSIVO NAVBARR */
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .max-width {
+        max-width: 930px;
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+        background-color: #121721;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 13px 0;
+        font-size: 25px;
+    }
+}
+/* END RESPONSIVO NAVBAR*/
+section {
+    padding: 50px 0;
+}
+@media (max-width: 690px) {
+    section {
+        padding: 20px 0;
+    }
+}
+
+/* START SECTION 1 */
+.top {
+    color: #fff;
+    display: flex;
+    background: url("../criar_o_topo_do_site/image/img-section-01.jpg") no-repeat center;
+    height: 100vh;
+    min-width: 500px;
+    background-size: cover;
+    background-attachment: fixed; /*Determina a posicao da imagem*/
+    font-family: 'Ubuntu', sans-serif;
+}
+.top .max-width {
+    width: 100%;
+    display: flex;
+}
+.top .top-content .text-1{
+    font-size: 25px;
+}
+.top .top-content .text-2{
+    font-size: 55px;
+    font-weight: 400;
+    margin-left: -3px;
+}
+.top .top-content .text-3{
+    font-size: 32px;
+    margin: 5px 0;
+}
+.top .top-content a {
+    display: inline-block;
+    background: #b02ab7;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: 400;
+    border: 2px solid #b02ab7;
+    transition: all 0.3s ease;
+}
+.top .top-content a:hover {
+    background: none;
+    color: #b02ab7;
+}
+
+/*SECTION 2 - SERVICES*/
+.services {
+    color: #fff;
+    background-color: #060f16;
+    font-family: 'Ubuntu',sans-serif;
+}
+.services .serv-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.services .title {
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 400;
+    font-size: 35px;
+}
+.services .serv-content .card {
+    width: calc(33% - 20px);
+    background: #1b202a;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+}
+.services .serv-content .card:hover {
+    background: #b02ab7;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card i {
+    font-size: 50px;
+    color: #b02ab7;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover i {
+    color: #fff;
+}
+.services .serv-content .card .box {
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box {
+    transform: scale(1.05);
+}
+.services .serv-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+/*RESPONSIVO*/
+@media (max-width: 947px) {
+    .services .serv-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 690px) {
+    .services .serv-content .card {
+        width: 100%;
+    }
+}
+
+/*SECTION PREMIUM*/
+.premium {
+    color: #fff;
+    background-color: #151921;
+    font-family: 'Ubuntu', sans-serif;
+}
+.premium .title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 35px;
+}
+.premium .premium-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.premium .premium-content .left {
+    width: 45%;
+}
+.premium .premium-content .left img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;/*Como sera apresentado o conteudo*/
+    border-radius: 6px;
+}
+.premium .premium-content .right {
+    width: 55%;
+}
+.premium .premium-content .text {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.premium .premium-content .right p {
+    text-align: justify;
+    line-height: 1.5;
+}
+.premium .premium-content .right a {
+    display: inline-block;
+    background: #b02ab7;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #b02ab7;
+    transition: all 0.3s ease;
+}
+.premium .premium-content .right a:hover {
+    color: #b02ab7;
+    background: none;
+}
+@media (.max-width: 1104px) {
+    .premium .premium-content .left img {
+        width: 350px;
+        height: 350px;
+    }
+}
+@media (max-width: 947px) {
+    .premium .premium-content .column {
+        width: 100%;
+    }
+    .premium .premium-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 au 60px;
+    }
+    .premium .premium-content .right {
+        flex: 1;
+    }
+    .premium .premium-content .right a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem auto;
+    }
+}
